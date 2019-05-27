@@ -112,7 +112,7 @@ body {
 
 .form-control-dark {
   color: #fff;
-  background-color: rgba(226, 226, 226, 0.9);
+  background-color: rgba(238, 235, 240, 0.9);
   border-color: rgba(255, 255, 255, .1);
 }
 
@@ -125,13 +125,98 @@ body {
  * Home Page Content
  */
 
+main {
+  display: flex !important;
+}
+
+.today-content {
+  width: 50%;
+  margin-bottom: 0 !important;
+}
+
+.daily-goal {
+  width: 35rem;
+  flex-direction: column !important;
+  padding: 5px;
+}
+
+.daily-goal-text {
+  display: inline-flex;
+  padding: 5px;
+  font-size: 28px;
+}
+
+.goal-btn {
+  position: absolute;
+  right: 50px;
+  top: 140px;
+}
+
+input[type="button"] {
+    display: inline-block;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    background: #370178;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+    box-shadow: 0px 0px 5px 0px #A5A5A5;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+#edit {
+  padding: 7px 14px 0 14px;
+  padding-bottom: 0;
+  line-height: 3rem;
+}
+
+#edit:hover {
+  /*border: 1px solid rgb(143, 143, 143);*/
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 0px #A5A5A5;;
+}
+
+#steps {
+  padding: 8px 5px 5px 5px;
+  font-weight: bold;
+}
+
+.main-graph {
+  flex-direction: column;
+  padding-top: 0 !important;
+}
+
 .content-container {
   margin: 3rem 2rem;
   padding: 3rem;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 20px 3px #DDDDDD;
+  position: relative;
+}
 
+.small {
+  width: 0.75rem;
 }
 
 .h2 {
