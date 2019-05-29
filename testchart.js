@@ -41,10 +41,10 @@ var myBarChart = new Chart(ctx2, {
       labels: ['Steps'],
       datasets: [{
         label: "Today's Distance",
-        data: [8000],
+        data: [2568],
         fill: false,
-        backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgb(255, 99, 132)"],
+        backgroundColor: ["rgba(87, 178, 101, 0.5)"],
+        borderColor: ["rgb(87, 178, 101)"],
         borderWidth: 1
       }]
     },
@@ -81,9 +81,19 @@ function updateRandomData(data) {
 }
 
 setInterval(function() {
-  myChart.data.datasets[0].data =      updateRandomData(myChart.data.datasets[0].data)
+  let data = myChart.data.datasets[0].data;
+  // update the data so it represents the current day's number of steps
+  myChart.data.datasets[0].data = updateRandomData(data)
+  // reload the graph
   myChart.update()
-  console.log("Updated!")
+
+  // update text stating current steps for today
+  document.getElementById("currSteps").innerHTML = data[data.length-1] + " steps";
+
+  // update bar graph showing today's number of steps
+  myBarChart.data.datasets[0].data = [data[data.length-1]]
+  // reload the graph
+  myBarChart.update()
 }, 5000);
 
 function saveEdits() {
@@ -93,6 +103,9 @@ function saveEdits() {
   var userVersion = editElem.innerHTML;
   //save the content to local storage
   localStorage.userEdits = userVersion;
+  // update the max count on the goal graph
+  myBarChart.options.scales.xAxes[0].ticks.max = parseInt(userVersion);
+  myBarChart.update()
 }
 
 function checkEdits() {
