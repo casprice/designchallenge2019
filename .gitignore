@@ -1,7 +1,5 @@
 node_modules
 package-lock.json
 output.txt
-dist/Chart.js
-dist/Chart.min.js
 chartstyle.css
 charttest.html
