@@ -84,7 +84,7 @@ var myBarChart = new Chart(ctx2, {
  * Return value: the updated data
  ***/
 function updateData(data) {
-  data[data.length-1] = data[data.length-1] + 10
+  data[data.length-1] = data[data.length-1] + Math.floor(Math.random() * 7) + 2;
   return data
 }
 

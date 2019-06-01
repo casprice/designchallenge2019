@@ -23,7 +23,7 @@ body {
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 70px 0 0; /* Height of navbar */
-  box-shadow: 5px 0px 12px -3px #AFAFAF;
+  box-shadow: 5px 0px 12px -3px rgba(98, 98, 98, 0.35);
   background-color: #3B4E5D !important;
 }
 
@@ -212,7 +212,7 @@ input[type="button"]:active {
   padding: 3rem;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px 3px #DDDDDD;
+  box-shadow: 0px 0px 20px 3px rgba(98, 98, 98, 0.35);
   position: relative;
 }
 
@@ -239,4 +239,8 @@ input[type="button"]:active {
 
 .table-body:hover > td {
   background: #ebdbf6 !important;
+}
+
+#darktoggler:hover {
+  cursor: pointer;
 }
