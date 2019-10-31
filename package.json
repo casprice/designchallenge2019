@@ -78,7 +78,7 @@
     "deprecated": "^0.0.1",
     "detect-file": "^1.0.0",
     "detect-indent": "^6.0.0",
-    "diff": "^1.0.8",
+    "diff": "^4.0.1",
     "duplexer": "^0.1.1",
     "editions": "^1.3.4",
     "electron-to-chromium": "^1.3.134",
